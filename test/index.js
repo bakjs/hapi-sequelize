@@ -1,5 +1,3 @@
-'use strict';
-
 // Load modules
 const Path = require('path');
 const Lab = require('lab');
