@@ -8,7 +8,8 @@
         "test-cov-html": "lab --leaks -a code -r html -o coverage.html",
         "lint": "eslint lib/*.js",
         "coveralls": "./node_modules/lab/bin/lab -r lcov | ./node_modules/.bin/coveralls",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "release": "standard-version && git push --follow-tags && npm publish"
     },
     "lint-staged": {
         "{{lib,test}/**/*.js,*.{js,md,json}}": [
@@ -50,11 +51,12 @@
         "mysql2": "1.5.2",
         "prettier": "1.11.1",
         "sequelize": "4.35.1",
-        "sqlite3": "3.1.13"
+        "sqlite3": "3.1.13",
+        "standard-version": "^4.4.0"
     },
     "peerDependencies": {
-        "sequelize": "^4.x",
-        "hapi": "^17.0.0"
+        "hapi": "^17.0.0",
+        "sequelize": "^4.x"
     },
     "engines": {
         "node": ">=8.0.0",
