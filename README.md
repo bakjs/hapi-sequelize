@@ -21,11 +21,29 @@ server.register([
         register: require('@bakjs/sequelize'),
         options: [
             {
-                name: 'dbname', // identifier
-                models: ['./server/models/**/*.js'], // paths/globs to model files
-                sequelize: new Sequelize(config, opts), // sequelize instance
-                sync: true, // sync models - default false
-                forceSync: false, // force sync (drops tables) - default false
+                // identifier
+                name: 'dbname',
+
+                // paths/globs to model files
+                models: ['./server/models/**/*.js'],
+
+                // sequelize: new Sequelize(/* ... */), // sequelize instance
+
+                // or connection string
+                connection: 'sqlite:dbname.db',
+
+                // or connection options
+                // connection: {
+                //     dialect: '',
+                //     username: '',
+                //     password: ''
+                // },
+
+                // sync models - default false
+                sync: true,
+
+                // force sync (drops tables) - default false
+                forceSync: false,
             },
         ],
     },
