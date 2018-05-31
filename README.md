@@ -1,11 +1,6 @@
-# hapi-sequelizejs [![Build Status](https://travis-ci.org/valtlfelipe/hapi-sequelizejs.svg?branch=master)](https://travis-ci.org/valtlfelipe/hapi-sequelizejs) [![Coverage Status](https://coveralls.io/repos/github/valtlfelipe/hapi-sequelizejs/badge.svg?branch=master)](https://coveralls.io/github/valtlfelipe/hapi-sequelizejs?branch=master)
+# hapi-sequelize
 
-hapi.js plugin for the Sequelize ORM
-
-### What's the difference between hapi-sequelize and hapi-sequelizejs?
-
-The reason of creating this fork is the inactivity of the original [hapi-sequelize](https://github.com/danecando/hapi-sequelize) plugin.
-See the [Migration guide](https://github.com/valtlfelipe/hapi-sequelizejs/wiki/Migration-guide).
+Hapi.js plugin for the Sequelize ORM.
 
 ### Compatibility
 
@@ -13,7 +8,7 @@ Compatible with hapi.js version `17.x` and sequelize `4.x`.
 
 ### Installation
 
-`npm install --save hapi-sequelizejs`
+`npm install --save @bakjs/sequelize`
 
 ### Configuration
 
@@ -23,7 +18,7 @@ or an array for multiple dbs.
 ```javascript
 server.register([
     {
-        register: require('hapi-sequelizejs'),
+        register: require('@bakjs/sequelize'),
         options: [
             {
                 name: 'dbname', // identifier
@@ -83,7 +78,7 @@ function DB(sequelize, models) {
 }
 
 // smth like this
-server.plugins['hapi-sequelizejs'][opts.name] = new DB(opts.sequelize, models);
+server.plugins['sequelize'][opts.name] = new DB(opts.sequelize, models);
 ```
 
 ### API
@@ -110,8 +105,11 @@ Returns single model that matches the passed argument or null if the model doesn
 
 Returns all models on the db instance
 
-### TODO/Contributing
+## License
 
-*   finalize api
-*   write tests
-*   improve readme
+MIT
+
+Based on:
+
+*   [valtlfelipe/hapi-sequelizejs](https://github.com/valtlfelipe/hapi-sequelizejs)
+*   [danecando/hapi-sequelize](https://github.com/danecando/hapi-sequelize)
