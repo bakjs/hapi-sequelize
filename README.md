@@ -68,7 +68,7 @@ module.exports = function(sequelize, DataTypes) {
 
 ### Database Instances
 
-Each registration adds a DB instance to the `server.plugins['hapi-sequelizejs']` object with the
+Each registration adds a DB instance to the `server.plugins['sequelize']` object with the
 name option as the key.
 
 ```javascript

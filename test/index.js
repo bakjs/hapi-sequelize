@@ -14,7 +14,7 @@ const lab = (exports.lab = Lab.script());
 const { suite, test } = lab;
 const { expect } = Code;
 
-suite('hapi-sequelizejs', () => {
+suite('sequelize', () => {
 
     test('should fail to load with no options', async () => {
         const server = new Hapi.Server();
@@ -49,8 +49,8 @@ suite('hapi-sequelizejs', () => {
             },
         ]);
 
-        expect(server.plugins['hapi-sequelizejs']).to.be.an.object();
-        expect(server.plugins['hapi-sequelizejs'].test).to.be.instanceof(DB);
+        expect(server.plugins['sequelize']).to.be.an.object();
+        expect(server.plugins['sequelize'].test).to.be.instanceof(DB);
     });
 
     test('should load a bad models configuration', async () => {
@@ -97,13 +97,13 @@ suite('hapi-sequelizejs', () => {
             },
         ]);
 
-        expect(server.plugins['hapi-sequelizejs']).to.be.an.object();
-        expect(server.plugins['hapi-sequelizejs'].test).to.be.instanceof(DB);
-        expect(server.plugins['hapi-sequelizejs'].test.getModels()).to.be.an.object();
-        expect(server.plugins['hapi-sequelizejs'].test.getModel('User')).to.be.a.function();
-        expect(server.plugins['hapi-sequelizejs'].test.getModel('Category')).to.be.a.function();
-        expect(server.plugins['hapi-sequelizejs'].test.getModel('Product')).to.be.a.function();
-        expect(server.plugins['hapi-sequelizejs'].test.getModel('DoesNotExists')).to.be.null();
+        expect(server.plugins['sequelize']).to.be.an.object();
+        expect(server.plugins['sequelize'].test).to.be.instanceof(DB);
+        expect(server.plugins['sequelize'].test.getModels()).to.be.an.object();
+        expect(server.plugins['sequelize'].test.getModel('User')).to.be.a.function();
+        expect(server.plugins['sequelize'].test.getModel('Category')).to.be.a.function();
+        expect(server.plugins['sequelize'].test.getModel('Product')).to.be.a.function();
+        expect(server.plugins['sequelize'].test.getModel('DoesNotExists')).to.be.null();
     });
 
     test('should sync all models', async () => {
@@ -126,12 +126,12 @@ suite('hapi-sequelizejs', () => {
             },
         ]);
 
-        expect(server.plugins['hapi-sequelizejs']).to.be.an.object();
-        expect(server.plugins['hapi-sequelizejs'].test).to.be.instanceof(DB);
-        expect(server.plugins['hapi-sequelizejs'].test.getModels()).to.be.an.object();
-        expect(server.plugins['hapi-sequelizejs'].test.getModel('User')).to.be.a.function();
-        expect(server.plugins['hapi-sequelizejs'].test.getModel('Category')).to.be.a.function();
-        expect(server.plugins['hapi-sequelizejs'].test.getModel('Product')).to.be.a.function();
+        expect(server.plugins['sequelize']).to.be.an.object();
+        expect(server.plugins['sequelize'].test).to.be.instanceof(DB);
+        expect(server.plugins['sequelize'].test.getModels()).to.be.an.object();
+        expect(server.plugins['sequelize'].test.getModel('User')).to.be.a.function();
+        expect(server.plugins['sequelize'].test.getModel('Category')).to.be.a.function();
+        expect(server.plugins['sequelize'].test.getModel('Product')).to.be.a.function();
     });
 
     test('should get DB instance on request', async () => {
@@ -345,7 +345,7 @@ suite('hapi-sequelizejs', () => {
 
         await server.stop();
 
-        const sequelizeInstance = server.plugins['hapi-sequelizejs'].test.sequelize;
+        const sequelizeInstance = server.plugins['sequelize'].test.sequelize;
         expect(() => sequelizeInstance.authenticate()).to.reject();
     });
 
