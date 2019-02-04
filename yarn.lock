@@ -249,10 +249,6 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-big-time@2.x.x:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/big-time/-/big-time-2.0.1.tgz#68c7df8dc30f97e953f25a67a76ac9713c16c9de"
-
 block-stream@*:
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
@@ -382,13 +378,12 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-catbox-memory@3.x.x:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/catbox-memory/-/catbox-memory-3.1.2.tgz#4aeec1bc994419c0f7e60087f172aaedd9b4911c"
+catbox-memory@4.x.x:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/catbox-memory/-/catbox-memory-4.0.1.tgz#3371ae0dd91bbf5d9dd88dcab5332470354cbd1f"
   dependencies:
-    big-time "2.x.x"
     boom "7.x.x"
-    hoek "5.x.x"
+    hoek "6.x.x"
 
 catbox@10.x.x:
   version "10.0.2"
@@ -1403,9 +1398,9 @@ hapi-scope-start@2.x.x:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/hapi-scope-start/-/hapi-scope-start-2.1.1.tgz#7495a726fe72b7bca8de2cdcc1d87cd8ce6ab4f2"
 
-hapi@17.6.4:
-  version "17.6.4"
-  resolved "https://registry.yarnpkg.com/hapi/-/hapi-17.6.4.tgz#5cec5c720e3daf40258618bc8d50bceb3c34d463"
+hapi@18.1.0:
+  version "18.1.0"
+  resolved "https://registry.yarnpkg.com/hapi/-/hapi-18.1.0.tgz#98a2a5a8f37a41eb196bdad9727f66b1fbca5fec"
   dependencies:
     accept "3.x.x"
     ammo "3.x.x"
@@ -1413,13 +1408,14 @@ hapi@17.6.4:
     bounce "1.x.x"
     call "5.x.x"
     catbox "10.x.x"
-    catbox-memory "3.x.x"
+    catbox-memory "4.x.x"
     heavy "6.x.x"
     hoek "6.x.x"
     joi "14.x.x"
     mimos "4.x.x"
     podium "3.x.x"
     shot "4.x.x"
+    somever "2.x.x"
     statehood "6.x.x"
     subtext "6.x.x"
     teamwork "3.x.x"
@@ -3158,6 +3154,13 @@ sntp@1.x.x:
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"
   dependencies:
     hoek "2.x.x"
+
+somever@2.x.x:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/somever/-/somever-2.0.0.tgz#7bdbed3bee8ece2c7c8a2e7d9a1c022bd98d6c89"
+  dependencies:
+    bounce "1.x.x"
+    hoek "6.x.x"
 
 source-map-resolve@^0.5.0:
   version "0.5.2"
