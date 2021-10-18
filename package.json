@@ -59,7 +59,7 @@
         "sequelize": "^4.41"
     },
     "engines": {
-        "node": ">=8.0.0",
+        "node": ">=v14.18.1",
         "npm": ">=5.6.0"
     },
     "dependencies": {
